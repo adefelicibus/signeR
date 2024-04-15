@@ -184,7 +184,7 @@ eBayesNMF<-function(M,W,n,ap,bp,ae,be,lp,le,var.ap=10,var.ae=10,
         return(sum(M*log(PE)-lgM-PE))
     }) #loglike is the sum of log-densities of Poisson distributions
     Bics <- 2*loglikes -n*(i+j)*log(j)
-    SE<-SignExpConstructor(Ps,Es)
+    SE<-SignExpConstructor(Ps,Es, samplenames=colnames(M), mutnames=rownames(M), signames=colnames(P))
     Phat<-Median_sign(SE)
     Ehat<-Median_exp(SE)
     if(!fixP){ #Ordering by total exposure.
@@ -192,7 +192,7 @@ eBayesNMF<-function(M,W,n,ap,bp,ae,be,lp,le,var.ap=10,var.ae=10,
         ord<-order(totalexp,decreasing=TRUE)
         Ps<-Ps[,ord,,drop=FALSE]
         Es<-Es[ord,,,drop=FALSE]
-        SE<-SignExpConstructor(Ps,Es)
+        SE<-SignExpConstructor(Ps,Es, samplenames=colnames(M), mutnames=rownames(M), signames=colnames(P))
         Phat<-Median_sign(SE)
         Ehat<-Median_exp(SE)
     }

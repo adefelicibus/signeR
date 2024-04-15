@@ -1,7 +1,7 @@
 Package: signeR
 Type: Package
 Title: Empirical Bayesian approach to mutational signature discovery
-Version: 2.5.0
+Version: 2.5.1
 Author: Rafael Rosales, Rodrigo Drummond, Renan Valieris,
         Alexandre Defelicibus, Israel Tojal da Silva
 Maintainer: Renan Valieris <renan.valieris@accamargo.org.br>
@@ -34,4 +34,3 @@ Suggests: knitr, BSgenome.Hsapiens.UCSC.hg19, BSgenome.Hsapiens.UCSC.hg38, rmark
 VignetteBuilder: knitr
 RoxygenNote: 7.2.3
 Encoding: UTF-8
-Packaged: 2022-07-07 19:37:44 UTC; alexandre

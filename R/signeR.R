@@ -116,6 +116,7 @@ signeR<-function(M, Mheader=TRUE, samples = "rows", Opport=NA,
       if(is.na(lp)) lp<-HH[["lp"]]
       if(is.na(le)) le<-HH[["le"]]
     }
+    P <- as.matrix(P)
     if (is.na(P[1])){ fixedP <- FALSE }else{ nsig <- NCOL(P) }
     if (fixedP){
         if(sum(is.na(c(ae,be,le)))>0){

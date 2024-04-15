@@ -1,4 +1,7 @@
 
+Changes in signeR 2.5.1:
+    * Preserve dimnames from the given input matrices
+
 Changes in signeR 2.3.3:
 
     * Minor documentation fixes
