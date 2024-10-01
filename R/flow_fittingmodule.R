@@ -310,7 +310,7 @@ fitting <- function(input,
       req(input$genbuild_fit)
 
       mygenome <- getBSgenome(input$genbuild_fit)
-      maf <- read_tsv(input$mutfile_fit$datapath)
+      maf <- read_tsv(input$mutfile_fit$datapath,comment="#")
 
       if (!validate_maf(maf)) {
         showModal(modalDialog(

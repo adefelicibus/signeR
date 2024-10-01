@@ -165,7 +165,7 @@ genCountMatrixFromVcf <- function(bsgenome, vcfobj) {
 
 genCountMatrixFromMAF <- function(bsgenome, maf_file) {
 
-    maf <- readr::read_tsv(maf_file, col_types='')
+    maf <- readr::read_tsv(maf_file, col_types='',comment="#")
 
     # assert all required columns are present
     if(!all(maf_req_columns %in% colnames(maf))) {
