@@ -5,8 +5,8 @@ signeRFlow <- function() {
     }
   
     options(shiny.usecairo = F)
-    # adjust limits for file upload to 50MB
-    options(shiny.maxRequestSize = 50 * 1024^2)
+    # adjust limits for file upload to 100MB
+    options(shiny.maxRequestSize = 100 * 1024^2)
 
     headerTagList <- list(
         tags$style(
